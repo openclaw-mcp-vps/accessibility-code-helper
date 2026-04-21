@@ -1,13 +1,38 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --surface: #111826;
+  --surface-alt: #161f31;
+  --line: #263349;
+  --text: #edf4ff;
+  --muted: #98a9c4;
+  --accent: #58c4dd;
+  --accent-2: #9be15d;
 }
 
-html {
-  scroll-behavior: smooth;
+* {
+  border-color: var(--line);
+}
+
+html,
+body {
+  min-height: 100%;
+  background: radial-gradient(circle at 20% 0%, #182435 0%, var(--bg) 55%) fixed;
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: #264f66;
+  color: #ffffff;
 }
